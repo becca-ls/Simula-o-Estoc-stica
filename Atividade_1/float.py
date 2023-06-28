@@ -3,7 +3,7 @@ import os
 import datetime
 import csv
 
-csvFile = 'C:/Users/rls/Documents/estocástica/Atividade_1/executionTime.csv'
+csvFile = 'C:/Users/rls/Documents/estocástica/Atividade_1/executionTime_float.csv'
 
 mode = 'a'  # read mode
 lista = []
