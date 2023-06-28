@@ -3,7 +3,7 @@ import os
 import datetime
 import csv
 # Pre-processing
-csvFile = 'C:/Users/Plugify/Documents/Simulacao Estocastica/Integer/executionTime.csv'
+csvFile = 'C:/Users/Plugify/Documents/Simulacao Estocastica/Integer/executionTime_inteiros.csv'
 
 
 mode = 'a'  # read mode
