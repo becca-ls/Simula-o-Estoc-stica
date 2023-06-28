@@ -1,8 +1,20 @@
 import subprocess
+import os
+
+
+def exec():
+    for _ in range(50):
+        executar()
+
 
 def executar():
-    subprocess.call(['python', 'C:/Users/rls/Documents/estocástica/Atividade_1/inteiros.py'])
+    pyFiles = [pyFile for pyFile in os.listdir(
+    ) if 'py' in pyFile and 'collectSample' not in pyFile]
+    print(pyFiles)
 
-# Executa o script "inteiros.py" 2500 vezes
-for _ in range(50):
-    executar()
+    for pyFile in pyFiles:
+        print("Running ", pyFile)
+        subprocess.call(
+            ['python', pyFile])
+
+exec()
