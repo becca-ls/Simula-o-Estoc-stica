@@ -1,5 +1,23 @@
 import pygame
+import os
+import datetime
+import csv
 
+csvFile = 'C:/Users/rls/Documents/estocástica/Atividade_1/executionTime_operacao_grafica.csv'
+mode = 'a'  # read mode
+
+if not os.path.exists(csvFile):
+    mode = 'w'  # mode write if the file does not exist
+
+def write(content: list[str], file):
+    writer = csv.writer(file)
+    if mode == 'w':
+        writer.writerow([
+            'start', 'end', 'delta'
+        ])
+    writer.writerow(content)
+
+start = datetime.datetime.now()
 # Inicialização do Pygame
 pygame.init()
 
@@ -15,13 +33,8 @@ posicao_x = 0
 posicao_y = 0
 
 # Loop principal do jogo
-executando = True
+executando = 10000
 while executando:
-    # Eventos do Pygame
-    for evento in pygame.event.get():
-        if evento.type == pygame.QUIT:
-            executando = False
-
     # Movimento da imagem
     posicao_x += 0.1
     posicao_y += 0.1
@@ -40,6 +53,17 @@ while executando:
 
     # Atualização da tela
     pygame.display.flip()
+    executando -=1
 
 # Encerramento do Pygame
 pygame.quit()
+
+# Pos-processing
+
+end = datetime.datetime.now()
+delta = end - start
+
+file = open(csvFile, mode)
+
+write([str(data) for data in [start, end, delta]], file)
+file.close()
