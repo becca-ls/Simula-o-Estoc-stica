@@ -3,25 +3,18 @@ import os
 import datetime
 import csv
 
-csvFile = './executionTime_disco.csv'
+csvFile = 'C:/Users/rls/Documents/estocástica/Atividade_1/executionTime_disco.csv'
 mode = 'a'
 
-
 def algorithm():
-    arquivo = open('./Atividade_1./arquivo.txt', 'w')
 
-    frase = 'Esta eh um arquivo de exemplo.'
-    qtd = 2
+    frase = 'Este eh um arquivo de exemplo.'
+    qtd = 500
 
     for _ in range(qtd):
+        arquivo = open('C:/Users/rls/Documents/estocástica/Atividade_1/arquivo.txt', 'w')
         arquivo.write(frase+'\n')
-
-    arquivo.close()
-
-    arquivo = open('./Atividade_1./arquivo.txt', 'r')
-    conteudo = arquivo.read()
-    arquivo.close()
-
+        arquivo.close()
 
 def write(content: list[str], file):
     writer = csv.writer(file)
