@@ -7,7 +7,7 @@ csvFile = 'C:/Users/rls/Documents/estocástica/Atividade_1/executionTime_float.c
 
 mode = 'a'  # read mode
 lista = []
-tamanho = 100000
+tamanho = 1000000
 
 if not os.path.exists(csvFile):
     mode = 'w'  # mode write if the file does not exist
