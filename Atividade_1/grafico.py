@@ -33,7 +33,7 @@ posicao_x = 0
 posicao_y = 0
 
 # Loop principal do jogo
-executando = 10000
+executando = 100
 while executando:
     # Movimento da imagem
     posicao_x += 0.1
