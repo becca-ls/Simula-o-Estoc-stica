@@ -2,13 +2,6 @@ import subprocess
 import os
 import pandas as pd
 
-
-def exec():
-    for _ in range(50):
-        executar()
-
-
-
 def executar():
     csvFiles = [csvFile for csvFile in os.listdir(
     ) if 'csv' in csvFile and 'collectSample' not in csvFile]
@@ -27,4 +20,4 @@ def executar():
 
         df.to_csv("dados_atividade.csv",index = false)
 
-exec()
+executar()
