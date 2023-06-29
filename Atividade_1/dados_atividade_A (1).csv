@@ -1,0 +1,6 @@
+file_name,mean,std_deviation
+executionTime_inteiros.csv,62.97827230769231,6.547627163688781
+executionTime_disco.csv,96.0180223076923,11.566365972413983
+executionTime_float.csv,58.47349307692308,6.154792666113665
+executionTime_matriz.csv,79.89486615384615,6.886351164053843
+executionTime_operacao_grafica.csv,711.6464538461538,30.752598579552537
