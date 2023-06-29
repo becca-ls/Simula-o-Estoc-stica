@@ -3,7 +3,7 @@ import os
 
 
 def exec():
-    for _ in range(50):
+    for _ in range(2500):
         executar()
 
 
