@@ -8,7 +8,7 @@ csvFile = 'C:/Users/rls/Documents/estocástica/Atividade_1/executionTime_matriz.
 
 mode = 'a'  # read mode
 matrizes = []
-qtd_matrizes = 10000
+qtd_matrizes = 100
 linhas = 30
 colunas = 30
 
